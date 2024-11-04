@@ -4,25 +4,39 @@ body {
   margin: 0;
   margin-top: 5px;
   min-height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+ flex-grow: 1;  /* El espacio que quieras que ocupe */
+  display: flex;
 }
 
 header {
-  height: 32px;
+  height: 50px;
   background: darkmagenta;
   color: white;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-left: 10px;
-  font-size: large;
-  font-weight: 800;
+  font-size: 140%;
+  font-weight: bold;
+  
 }
+
+
 
 footer {
   padding-top: 20px;
   height: 22px;
   background: #eee;
   color: darkmagenta;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+ 
 }
+
+
 
 aside {
   width: 300px;
@@ -30,15 +44,26 @@ aside {
   color: white;
   padding-top: 10px ;
   box-sizing: border-box;
+  font-size: large;
+}
+
+section{
+  flex: 8;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-content: space-around;
+
 }
 
 .card {
+  width: 200px;
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
   padding: 10px;
-  flex-direction: row;
-  
 }
 
 li{
@@ -53,11 +78,7 @@ a{
 
 ul{
   padding-left: 3%;
-  /* padding-bottom: 100%; */
+  padding-bottom: 100%;
   margin-top: 0%;
-  align-items: stretch;
 }
 
-div{
-  /* flex-wrap:wrap; */
-}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburguer Menú</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+        .menu-container{
+            position: fixed;
+            top: 0;
+            z-index:1;
+
+        }
+        .menu-container .toggler{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 60px;
+            height: 60px;
+            cursor: pointer; 
+        }
+
+        /* CSS para la capa del menu */
+        .menu-container .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* visibility: hidden; */
+            transform: translate(-120vw);
+            transition: all 0.4s ease;
+            background-color: rgba(0, 255, 255, 0.678);
+        }
+        .menu-container .toggler:checked ~ .menu {
+            /* visibility: visible; */
+            transform: translate(0);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="menu-container">
+        <!-- botón -->
+         <input type="checkbox" class="toggler">
+         <div class="hamburger">
+            <div></div>
+         </div>
+         <!-- menu -->
+          <div class="menu">
+          
+            <ul>
+                <li> <a href="#">Inicio</a></li>
+                <li> <a href="#">Sobre nosotros</a></li>
+                <li> <a href="#">Servicios</a></li>
+                <li> <a href="#">Contacto</a></li>
+            </ul>
+          </div>
+    </div>
+    <header id="showcase">
+      <div class="container showcase-container">
+        <h1>Ejemplo de menú desplegable</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
+          ducimus modi quibusdam corrupti laudantium. Odio aut suscipit, neque
+          aliquid error beatae modi, perferendis, quasi minus sed impedit
+          doloremque numquam reiciendis.</p>
+        <a href="#" class="btn">Leer más</a>
+      </div>
+    </header>
+
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, veritatis nesciunt ipsam officia, quo aliquam ad facere maxime molestias voluptatibus incidunt quaerat esse excepturi voluptatem accusamus dolores omnis facilis quos.</p>
+    </main>
+
+    <footer>
+        <p>aqui va el footer</p>
+    </footer>
+  </body>
+</html>
