@@ -11,16 +11,35 @@
             position: fixed;
             top: 0;
             z-index:1;
-
+            
         }
         .menu-container .toggler{
             position: absolute;
             top: 0;
             left: 0;
             z-index: 2;
-            width: 60px;
-            height: 60px;
-            cursor: pointer; 
+            width: var(--hamburger-size);
+            height: var(--hamburger-size);
+            cursor: pointer;
+            opacity: 0.4;
+        }
+        /* contenedor para el icono del menu */
+        .menu-container .hamburger{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: var(--hamburger-size);
+            height: var(--hamburger-size);
+            z-index: 1;
+            background-color: var(--color-secundario);
+        }
+
+        /* dibujar las lineas del menu */
+        .menu-container .hamburger >div{
+          width: 10px;
+          height: 4px;
+          background-color: #fff;
+          
         }
 
         /* CSS para la capa del menu */
@@ -34,13 +53,13 @@
             justify-content: center;
             align-items: center;
             /* visibility: hidden; */
-            transform: translate(-120vw);
+            transform: translateX(-100vw);
             transition: all 0.4s ease;
             background-color: rgba(0, 255, 255, 0.678);
         }
-        .menu-container .toggler:checked ~ .menu {
-            /* visibility: visible; */
-            transform: translate(0);
+       .menu-container .toggler:checked~ .menu {   /*cuando este checkeado, se activa */
+             visibility: visible; 
+            transform: translateX(0);
         }
     </style>
   </head>
